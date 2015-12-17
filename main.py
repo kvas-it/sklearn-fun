@@ -11,7 +11,7 @@ lists = loader.read_csv(loader.ALL_WARDS)
 dicts = loader.to_dicts(lists)
 dicts = loader.convert_types(dicts)
 dicts = loader.filter_broken(dicts)
-dicts = list(filter(lambda d: d['WARD'] == 1, dicts))
+# dicts = list(filter(lambda d: d['WARD'] == 1, dicts))
 
 prepare.add_dummies(dicts)
 prepare.remove_bad_vars(dicts)
